@@ -1,1 +1,16 @@
 /* css styles */
+.navbar-dark .navbar-nav .show > .nav-link, 
+.navbar-dark .navbar-nav .active > .nav-link, 
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #fff;
+}
+.navbar-dark {
+  background-color: #312F2F;
+}
+ul.me-auto {
+  margin-left: auto !important;
+}
+ul.me-auto {
+  margin-right: 0 !important;
+}
