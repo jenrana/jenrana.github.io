@@ -25,6 +25,13 @@ div.sidebar-item-container {
 .sidebar-navigation .sidebar-tool {
   color: #fff;
   }
+  .sidebar-item {
+  margin-bottom: .5em;
+}
+.sidebar-header{
+  padding-bottom: 20px;
+  border-bottom: 1px solid #777;
+}
 .navbar-dark .navbar-nav .show > .nav-link, 
 .navbar-dark .navbar-nav .active > .nav-link, 
 .navbar-dark .navbar-nav .nav-link.active,
