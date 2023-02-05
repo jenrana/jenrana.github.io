@@ -1,8 +1,11 @@
 /* css styles */
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Dosis:wght@200;600&display=swap');
-body{
-  letter-spacing: 0;
+body {
+  letter-spacing: 0 !important;
+}
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  letter-spacing: 0 !important;
 }
 footer.footer .nav-footer{
   background-color:#011936;
@@ -54,4 +57,20 @@ ul.me-auto {
 footer{  
   background-color: #011936;
   color: #eee;
+}
+.quarto-grid-item img.thumbnail-image {
+  object-fit: cover;
+  height: auto !important;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.quarto-grid-item .listing-categories {
+  padding: 5px 0;
+}
+details > summary {
+  color:#64A6BD;
+  font-size: 14px;
+}
+.quarto-grid-item .card-title {
+  color:#64A6BD;
 }

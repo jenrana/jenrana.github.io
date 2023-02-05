@@ -1,5 +1,33 @@
 [
   {
+    "objectID": "posts/worldcup.html",
+    "href": "posts/worldcup.html",
+    "title": "FIFA World Cup",
+    "section": "",
+    "text": "Inspired by the November 29, 2022 Tidy Tuesday dataset on FIFA World Cup matches played in its history from Uruguay in 1930 to Russia in 2018. I primarily wanted to take a look at total goals scored, frequency of winners and increase in attendance.\n\n\nThe first thing I wanted to explore was the correlation, if any, between the amount of goals scored in all world cup games and the amount of fans in the stands. It definitely appears that as attendance increases goals also increase.\n\n\nBehind the scenes\nworldcups %>%\n  ggplot(aes(x=goals_scored, y=attendance/1000, color=winner,text=winner))+\n  geom_point()+ \n  labs(\n    title = \"More Fans = More Goals?\",\n    subtitle = \"A look at the correlation between fans in attendance and # of goals scored.\",\n    plot.title = element_text(face=\"bold\"),\n    x = \"Goals Scored\",\n    y = \"Attendance (in thousands)\",\n    color = \"Winning Country\",\n    size=\"\"\n    )+\n  scale_color_brewer(palette = \"Paired\")\n\n\n\n\n\n\n\n\nI also wanted to explore who the top winners were throughout the history of the World Cup.\n\n\nBehind the scenes\nworldcups %>%\n  ggplot(aes(x=forcats::fct_rev(fct_infreq(winner)),text=winner,fill=winner))+\n  geom_bar(stat=\"count\")+ \n  labs(\n    title = \"Winningest Countries of All Time\",\n    plot.title = element_text(face=\"bold\"),\n    legend.title = element_text(margin = margin(0, 0, 15, 0)),\n    legend.position = \"right\",\n    legend.justification = \"top\",\n    x = \"Country\",\n    y = \"# of World Cup Wins\",\n    color = \"Winning Country\",\n    size=\"\"\n    )+\n  coord_flip()+\n  scale_fill_brewer(palette = \"Paired\")+\n  theme(legend.position=\"none\")"
+  },
+  {
+    "objectID": "posts/fightsongs.html#plot-recreation",
+    "href": "posts/fightsongs.html#plot-recreation",
+    "title": "Let’s Recreate: Fight Songs",
+    "section": "Plot Recreation",
+    "text": "Plot Recreation\nThis was part of an assignment to take a FiveThirtyEight chart and see how close we could get to the original.\n\n\nBehind the scenes\njustOregon<-subset(fight.songs,fight.songs$school==\"Oregon State\")\n\nggplot(data=fight.songs, aes(x=sec_duration, y=bpm, color=hex))+\n  geom_point(alpha=.2, size=4)+\n  scale_x_continuous(breaks=c(0,20,40,60,80,100,120,140,160,180), limits=c(0,180))+\n  scale_y_continuous(breaks=c(60,80,100,120,140,160,180,200), limits=c(40,200))+\n  geom_point(data=justOregon, aes(x=sec_duration, y=bpm, fill=\"#DC4405\", color=\"#000000\"), shape=21, size=4, stroke = 1)+\n  geom_text(data=justOregon, aes(label=school, fontface=\"bold\"), position = position_nudge(y = 12)) +\n  geom_hline(yintercept = mean(fight.songs$bpm), linetype='dotted', color=\"black\")+\n  geom_vline(xintercept = mean(fight.songs$sec_duration), linetype='dotted', color=\"black\")+\n  scale_color_manual(values=fight.songs$hex)+\n  labs(\n    title = \"How the Oregon State fight song stacks up\",\n    x = \"Duration\",\n    y = \"Beats per minute\"\n  ) +\n  guides(color=\"none\",fill=\"none\")+\n  theme_minimal()+\n  theme(\n    panel.grid.minor = element_blank(),\n    aspect.ratio=3/4,\n    axis.title = element_text(face=\"bold\"),\n    title = element_text(face=\"bold\"),\n  )+\n  annotate(\"text\", x = 30, y = 190, label = \"Fast and short\", family=\"mono\")+\n  annotate(\"text\", x = 160, y = 190, label = \"Fast but long\", family=\"mono\")+\n  annotate(\"text\", x = 30, y = 45, label = \"Slow but short\", family=\"mono\")+\n  annotate(\"text\", x = 160, y = 45, label = \"Slow and long\", family=\"mono\")"
+  },
+  {
+    "objectID": "posts/fightsongs.html#alternative-plot",
+    "href": "posts/fightsongs.html#alternative-plot",
+    "title": "Let’s Recreate: Fight Songs",
+    "section": "Alternative Plot",
+    "text": "Alternative Plot\nThe next step in the assignment was to come up with an alternate plot using the data provided. I thought it might be interesting to look at the number of times the word “fight” was actually used in school fight songs, by conference.\n\n\nBehind the scenes\nfight.songs %>% \n  group_by(conference) %>% \n  summarise(sumfight = sum(number_fights)) %>% \n  ggplot(aes(x = conference, y = sumfight, fill = conference)) +\n  geom_col()+\n  theme_minimal()+\n  theme(\n    panel.grid.minor = element_blank(),\n    axis.title = element_text(face=\"bold\"),\n    title = element_text(face=\"bold\"),\n  )+\n  scale_fill_brewer(palette=\"Set1\")+\n  labs(\n    title = \"How many times the song says fight by Conference\",\n    x = \"Conference\",\n    y = \"Number of times the song says fight\",\n    fill=\"Conference\"\n  )"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Recent Projects",
+    "section": "",
+    "text": "FIFA World Cup\n\n\n\nr\n\n\nsports\n\n\nggplot\n\n\ntidytuesday\n\n\n\nA look at FIFA World Cup history from 1930 to 2018\n\n\n\n\n\n\nFeb 5, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLet’s Recreate: Fight Songs\n\n\n\nr\n\n\nggplot\n\n\nFiveThirtyEight\n\n\n\nA recreation and alternate graph for school fight songs\n\n\n\n\n\n\nOct 11, 2022\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Welcome",
