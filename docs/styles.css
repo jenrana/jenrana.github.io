@@ -74,3 +74,6 @@ details > summary {
 .quarto-grid-item .card-title {
   color:#64A6BD;
 }
+.tabwid table {
+  width: 100%;
+}
