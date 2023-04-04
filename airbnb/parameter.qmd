@@ -1,0 +1,125 @@
+---
+title: "Airbnb European Snapshot for: `r str_to_title(params$city)`"
+author: "prepared by Jennifer Rana"
+output: 
+  flexdashboard::flex_dashboard:
+    css: styles.css
+    logo: logo.png
+    favicon: favicon.png
+    vertical_layout: scroll
+    orientation: rows
+    theme:
+      bootswatch: "minty"
+params:
+  city: amsterdam
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, 
+                      message = FALSE, 
+                      warning = FALSE)
+```
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+library(dplyr)
+library(purrr)
+library(data.table)
+library(gsubfn)
+library(tidyr)
+library(flexdashboard)
+
+#files <- dir(pattern = "*.csv")
+#file.list <- sapply(files, read.csv, simplify=FALSE)
+#airbnb <- rbindlist(file.list, idcol="city")[, city := gsub("(.*)[_]([^.]+)[.].*", "\\1 \\2",city)]
+#airbnb<-separate(airbnb, city, into = c("city", "type"), sep = " (?=[^ ]+$)")
+```
+
+
+```{r}
+airbnb_subset <- airbnb %>%
+  filter(city == params$city)
+
+cbPalette <- c("#5AB2FF", "#00A699", "#FFE25A", "#845AFF", "#FC642D", "#FF5A5F")
+
+bedplot<-airbnb_subset %>%
+  ggplot(aes(bedrooms, fill=type)) +
+    geom_bar(stat="count",position="dodge")+
+    theme_minimal()+
+    theme(legend.position="bottom")+ 
+    labs(fill="", x = "Number of Bedrooms", y = "")  +
+    scale_fill_manual(values=cbPalette)
+
+
+cleanplot<-airbnb_subset %>%
+  ggplot(aes(cleanliness_rating, fill=room_type)) +
+    geom_bar(stat="count",position="dodge")+
+    theme_minimal()+
+    theme(legend.position="bottom")+ 
+    labs(fill="", x = "Cleanliness Rating", y = "")  +
+    scale_fill_manual(values=cbPalette)
+
+dist<-airbnb_subset %>%
+  filter(realSum<4000) %>%
+  ggplot(aes(x=metro_dist, y=realSum, color=type)) +
+    geom_point(alpha=.5, size=2)+
+    theme_minimal()+
+    theme(legend.position="bottom")+ 
+    labs(color="", x = "Distance from City Center", y = "Total Price") +
+    scale_color_manual(values=cbPalette)
+```
+
+Row
+-----------------------------------------------------------------------
+
+### Number of rentals
+
+```{r}
+articles <- nrow(airbnb_subset)
+valueBox(articles, icon = "fa-home")
+```
+
+### Number of super hosts
+
+```{r}
+super <- nrow(airbnb_subset %>% filter(host_is_superhost == "True"))
+valueBox(super, icon = "fa-user")
+```
+
+### Average price per night
+
+```{r}
+avgprice <- round(mean(airbnb_subset$realSum),digits = 0)
+valueBox(avgprice, icon = "fa-coins")
+```
+
+
+### Average guest satisfaction
+
+```{r}
+avgprice <- round(mean(airbnb_subset$guest_satisfaction_overall),digits = 0)
+valueBox(avgprice, icon = "fa-star")
+```
+
+
+
+Row
+-------------------------------------
+    
+### Number of Bedrooms
+    
+```{r}
+bedplot
+```
+    
+### Cleanliness
+
+```{r}
+cleanplot
+```
+
+### Price & Distance from City Center
+
+```{r}
+dist
+```
