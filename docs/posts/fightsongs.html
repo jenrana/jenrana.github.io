@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="dcterms.date" content="2022-10-11">
-<meta name="description" content="A recreation and alternate graph for school fight songs">
+<meta name="description" content="A recreation, alternate and interactive plot for school fight songs">
 
-<title>jenniferRana - Let’s Recreate: Fight Songs</title>
+<title>jennifer rana - Let’s Recreate: Fight Songs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -105,11 +105,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 20,
   "language": {
     "search-no-results-text": "No results",
@@ -128,52 +128,58 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-sidebar docked">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Let’s Recreate: Fight Songs</h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
-      </button>
-    </div>
-  </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">jennifer rana</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../projects.html">
+ <span class="menu-text">Recent Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../whyme.html">
+ <span class="menu-text">About Me</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/jenrana"><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/jenrana/"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/jennifer-duvoisin-rana/"><i class="bi bi-linkedin" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="../">jenniferRana</a> 
-        <div class="sidebar-tools-main">
-    <a href="https://twitter.com/jenrana" title="" class="sidebar-tool px-1"><i class="bi bi-twitter"></i></a>
-    <a href="https://github.com/jenrana/" title="" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
-</div>
-    </div>
-      </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">Welcome</a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../projects.html" class="sidebar-item-text sidebar-link">Recent Projects</a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../about.html" class="sidebar-item-text sidebar-link">About Me</a>
-  </div>
-</li>
-    </ul>
-    </div>
-</nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -182,7 +188,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <ul>
   <li><a href="#plot-recreation" id="toc-plot-recreation" class="nav-link active" data-scroll-target="#plot-recreation">Plot Recreation</a></li>
   <li><a href="#alternative-plot" id="toc-alternative-plot" class="nav-link" data-scroll-target="#alternative-plot">Alternative Plot</a></li>
-  <li><a href="#interaction" id="toc-interaction" class="nav-link" data-scroll-target="#interaction">Interaction</a></li>
+  <li><a href="#interactive-plot" id="toc-interactive-plot" class="nav-link" data-scroll-target="#interactive-plot">Interactive Plot</a></li>
   </ul>
 </nav>
     </div>
@@ -191,7 +197,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Let’s Recreate: Fight Songs</h1>
+<h1 class="title">Let’s Recreate: Fight Songs</h1>
   <div class="quarto-categories">
     <div class="quarto-category">R</div>
     <div class="quarto-category">ggplot2</div>
@@ -203,7 +209,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <div>
   <div class="description">
-    A recreation and alternate graph for school fight songs
+    A recreation, alternate and interactive plot for school fight songs
   </div>
 </div>
 
@@ -229,7 +235,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <section id="plot-recreation" class="level2">
 <h2 class="anchored" data-anchor-id="plot-recreation">Plot Recreation</h2>
-<p>This was part of an assignment to take a <a href="https://projects.fivethirtyeight.com/college-fight-song-lyrics/">FiveThirtyEight chart</a> and see how close we could get to the original.</p>
+<p>This was part of an assignment to take a <a href="https://projects.fivethirtyeight.com/college-fight-song-lyrics/" target="_blank">FiveThirtyEight chart</a> and see how close we could get to the original.</p>
 <div class="cell">
 <details>
 <summary>Behind the scenes</summary>
@@ -297,9 +303,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 </section>
-<section id="interaction" class="level2">
-<h2 class="anchored" data-anchor-id="interaction">Interaction</h2>
-<p>The final step in the process was to create an interactive plot. This is a shiny app that uses plotly for some interaction.</p>
+<section id="interactive-plot" class="level2">
+<h2 class="anchored" data-anchor-id="interactive-plot">Interactive Plot</h2>
+<p>The final step in the process was to create an interactive plot. This is a Shiny app that uses plotly for some interaction.</p>
 <div class="cell">
 <details>
 <summary>Behind the scenes</summary>
@@ -407,7 +413,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb3-102"><a href="#cb3-102" aria-hidden="true" tabindex="-1"></a><span class="fu">shinyApp</span>(<span class="at">ui =</span> ui, <span class="at">server =</span> server)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<iframe height="1400" width="100%" frameborder="no" src="https://d443t1-jennifer-rana.shinyapps.io/shinyex/" style="border: 4px solid #246373;"> </iframe>
+<iframe height="600" width="100%" frameborder="no" src="https://jennifer-rana.shinyapps.io/shinyex/" style="border: 4px solid #246373;"> </iframe>
+<p><a href="../projects.html">« Back to Projects</a></p>
 
 
 </section>
@@ -553,7 +560,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
-    <a class="nav-link active" href="https://twitter.com/jenrana" aria-current="page">
+    <a class="nav-link" href="https://twitter.com/jenrana">
       <i class="bi bi-twitter" role="img">
 </i> 
     </a>
@@ -561,6 +568,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/jenrana/">
       <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/jennifer-duvoisin-rana/">
+      <i class="bi bi-linkedin" role="img">
 </i> 
     </a>
   </li>  

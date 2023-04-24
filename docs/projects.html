@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>jenniferRana - Recent Projects</title>
+<title>jennifer rana - Recent Projects</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -42,11 +42,11 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 20,
   "language": {
     "search-no-results-text": "No results",
@@ -70,9 +70,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-title","listing-date"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -95,62 +95,66 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-sidebar docked">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Recent Projects</h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
-      </button>
-    </div>
-  </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">jennifer rana</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./projects.html" aria-current="page">
+ <span class="menu-text">Recent Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./whyme.html">
+ <span class="menu-text">About Me</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/jenrana"><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/jenrana/"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/jennifer-duvoisin-rana/"><i class="bi bi-linkedin" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="./">jenniferRana</a> 
-        <div class="sidebar-tools-main">
-    <a href="https://twitter.com/jenrana" title="" class="sidebar-tool px-1"><i class="bi bi-twitter"></i></a>
-    <a href="https://github.com/jenrana/" title="" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
-</div>
-    </div>
-      </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">Welcome</a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./projects.html" class="sidebar-item-text sidebar-link active">Recent Projects</a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./about.html" class="sidebar-item-text sidebar-link">About Me</a>
-  </div>
-</li>
-    </ul>
-    </div>
-</nav>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="FiveThirtyEight">FiveThirtyEight <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Plotly">Plotly <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R">R <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Shiny">Shiny <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Sports">Sports <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TidyTuesday">TidyTuesday <span class="quarto-category-count">(1)</span></div><div class="category" data-category="flextable">flextable <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ggiraph">ggiraph <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ggplot2">ggplot2 <span class="quarto-category-count">(4)</span></div></div></div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Recent Projects</h1>
+<h1 class="title">Recent Projects</h1>
 </div>
 
 
@@ -170,8 +174,80 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title" data-direction="asc">
+          Title
+        </option>
+         <option value="listing-date-sort" data-direction="asc">
+          Date - Oldest
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Date - Newest
+        </option>
+     </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="R,ggplot2,ggiraph" data-listing-date-sort="1676793600000" data-listing-file-modified-sort="1676939243297" data-listing-reading-time-sort="0.9">
+<div class="g-col-1" data-index="0" data-categories="R,ggplot2,leaflet,datatable,shiny" data-listing-date-sort="1682146800000" data-listing-file-modified-sort="1682312938983" data-listing-reading-time-sort="14.44">
+<a href="./posts/air-shiny.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./posts/airbnb.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Airbnb European Snapshot, Shiny Edition
+</h5>
+<div class="card-text listing-description">
+A Shiny app showing a dashboard for various European cities
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+
+</div>
+<div class="listing-date">
+Apr 22, 2023
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="R,ggplot2" data-listing-date-sort="1681196400000" data-listing-file-modified-sort="1682313530108" data-listing-reading-time-sort="2.16">
+<a href="./posts/air-parameter.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./posts/airbnbdash.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Airbnb European Snapshot
+</h5>
+<div class="card-text listing-description">
+Parameterized HTML dashboards for various cities
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+
+</div>
+<div class="listing-date">
+Apr 11, 2023
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="R,ggplot2,ggiraph" data-listing-date-sort="1676793600000" data-listing-file-modified-sort="1682313423743" data-listing-reading-time-sort="0.935">
 <a href="./posts/wines.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -181,17 +257,6 @@ ul.task-list li input[type="checkbox"] {
 <h5 class="no-anchor card-title listing-title">
 Pinots and Points
 </h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
-R
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('ggplot2'); return false;">
-ggplot2
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('ggiraph'); return false;">
-ggiraph
-</div>
-</div>
 <div class="card-text listing-description">
 Are there +90 point budget wines?
 </div>
@@ -207,7 +272,7 @@ Feb 19, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="R,ggplot2,flextable" data-listing-date-sort="1676188800000" data-listing-file-modified-sort="1676318394158" data-listing-reading-time-sort="7.455">
+<div class="g-col-1" data-index="3" data-categories="R,ggplot2,flextable,sports" data-listing-date-sort="1676188800000" data-listing-file-modified-sort="1682313077574" data-listing-reading-time-sort="7.45">
 <a href="./posts/goat.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -217,17 +282,6 @@ Feb 19, 2023
 <h5 class="no-anchor card-title listing-title">
 The Quest for the GOAT
 </h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
-R
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('ggplot2'); return false;">
-ggplot2
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('flextable'); return false;">
-flextable
-</div>
-</div>
 <div class="card-text listing-description">
 Solving the never-ending debate of the greatest basketball player of all time
 </div>
@@ -243,7 +297,7 @@ Feb 12, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="R,Sports,ggplot2,TidyTuesday" data-listing-date-sort="1675584000000" data-listing-file-modified-sort="1675739004096" data-listing-reading-time-sort="1.52">
+<div class="g-col-1" data-index="4" data-categories="R,Sports,ggplot2,TidyTuesday" data-listing-date-sort="1675584000000" data-listing-file-modified-sort="1682312943853" data-listing-reading-time-sort="1.535">
 <a href="./posts/worldcup.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -253,20 +307,6 @@ Feb 12, 2023
 <h5 class="no-anchor card-title listing-title">
 FIFA World Cup
 </h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
-R
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Sports'); return false;">
-Sports
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('ggplot2'); return false;">
-ggplot2
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('TidyTuesday'); return false;">
-TidyTuesday
-</div>
-</div>
 <div class="card-text listing-description">
 A look at FIFA World Cup history from 1930 to 2018
 </div>
@@ -282,7 +322,7 @@ Feb 5, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="3" data-categories="R,ggplot2,FiveThirtyEight,Shiny,Plotly" data-listing-date-sort="1665471600000" data-listing-file-modified-sort="1676933899790" data-listing-reading-time-sort="5.355">
+<div class="g-col-1" data-index="5" data-categories="R,ggplot2,FiveThirtyEight,Shiny,Plotly" data-listing-date-sort="1665471600000" data-listing-file-modified-sort="1682312912790" data-listing-reading-time-sort="5.375">
 <a href="./posts/fightsongs.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -292,25 +332,8 @@ Feb 5, 2023
 <h5 class="no-anchor card-title listing-title">
 Let’s Recreate: Fight Songs
 </h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
-R
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('ggplot2'); return false;">
-ggplot2
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('FiveThirtyEight'); return false;">
-FiveThirtyEight
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Shiny'); return false;">
-Shiny
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Plotly'); return false;">
-Plotly
-</div>
-</div>
 <div class="card-text listing-description">
-A recreation and alternate graph for school fight songs
+A recreation, alternate and interactive plot for school fight songs
 </div>
 <div class="card-attribution card-text-small justify">
 <div class="listing-author">
@@ -469,7 +492,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
-    <a class="nav-link active" href="https://twitter.com/jenrana" aria-current="page">
+    <a class="nav-link" href="https://twitter.com/jenrana">
       <i class="bi bi-twitter" role="img">
 </i> 
     </a>
@@ -477,6 +500,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/jenrana/">
       <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/jennifer-duvoisin-rana/">
+      <i class="bi bi-linkedin" role="img">
 </i> 
     </a>
   </li>  
